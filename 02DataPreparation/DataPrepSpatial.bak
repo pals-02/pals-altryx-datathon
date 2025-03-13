@@ -1,0 +1,467 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">D:\workspace\alteryx\Datathon2024\DPR\workflows\data\IndoorPoolsDataprep.yxdb</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>IndoorPoolsDataprep.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="borough" size="1" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\Preparation\01_NYCParksPools.csv" type="String" />
+            <Field name="gispropnum" size="5" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\Preparation\01_NYCParksPools.csv" type="String" />
+            <Field name="location" size="7" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\Preparation\01_NYCParksPools.csv" type="String" />
+            <Field name="name" size="35" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\Preparation\01_NYCParksPools.csv" type="V_String" />
+            <Field name="polygon" size="4885" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\Preparation\01_NYCParksPools.csv" type="V_String" />
+            <Field name="the_geom" size="13884" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\Preparation\02_DPRPools.csv" type="V_String" />
+            <Field name="pooltype" size="12" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\Preparation\02_DPRPools.csv" type="String" />
+            <Field name="shape_star" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\Preparation\02_DPRPools.csv" type="Double" />
+            <Field name="shape_stle" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\Preparation\02_DPRPools.csv" type="Double" />
+            <Field name="Size" size="17" source="File: D:\workspace\alteryx\Datathon2024\DPR\workflows\data\IndoorPoolsDataprep.yxdb" type="V_String" />
+            <Field name="Accessible" size="1" source="File: D:\workspace\alteryx\Datathon2024\DPR\workflows\data\IndoorPoolsDataprep.yxdb" type="V_String" />
+            <Field name="lat" size="7" source="File: D:\workspace\alteryx\Datathon2024\DPR\workflows\data\IndoorPoolsDataprep.yxdb" type="V_String" />
+            <Field name="lon" size="8" source="File: D:\workspace\alteryx\Datathon2024\DPR\workflows\data\IndoorPoolsDataprep.yxdb" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="198" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\palsd\AppData\Local\Temp\Engine_6928_9bac1d4547c2ed4db7d81f94fc841e72_\Engine_6928_a62553ee6cd3194eac91206c9b207868~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.CreatePoints.CreatePoints">
+        <Position x="222" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Fields fieldX="lon" fieldY="lat" />
+          <Mode>Double</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxCreatePoints" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="318" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\palsd\AppData\Local\Temp\Engine_6928_9bac1d4547c2ed4db7d81f94fc841e72_\Engine_6928_b410a813ab29ef41886e14bc72773245~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Map</DefaultTab>
+              <Hints>
+                <Map>
+                  <BaseMap>[No Base Map]</BaseMap>
+                </Map>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.TradeArea.TradeArea">
+        <Position x="342" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SpatialObj field="Centroid" includeOut="True" />
+          <Units units="Miles" noOverlap="False" />
+          <Radius_FromField value="False" />
+          <Radii>5.0</Radii>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>5.0 Miles</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxTradeArea" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="426" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\palsd\AppData\Local\Temp\Engine_6928_9bac1d4547c2ed4db7d81f94fc841e72_\Engine_6928_28d50436d0d84b458830f636080a6aad~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Map</DefaultTab>
+              <Hints>
+                <Map>
+                  <BaseMap>[No Base Map]</BaseMap>
+                </Map>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Distance.Distance">
+        <Position x="306" y="414" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OutputDistance value="True" />
+          <ReturnNearest value="False" />
+          <DistToInsideEdge value="False" />
+          <OutputDriveTimeAndDistance value="False" />
+          <SpatialObjSource>Centroid</SpatialObjSource>
+          <SpatialObjDest>Centroid</SpatialObjDest>
+          <DriveTimeDataSet>Latest</DriveTimeDataSet>
+          <AllowReverseRoute value="True" />
+          <MaxDriveTime value="30" />
+          <DriveDistanceOnly value="False" />
+          <OutputCardinalDirection value="True" />
+          <OutputDirectionDegrees value="False" />
+          <IsMetric value="False" />
+          <OutputUnits>Miles</OutputUnits>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxDistance" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="426" y="414" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\palsd\AppData\Local\Temp\Engine_6928_9bac1d4547c2ed4db7d81f94fc841e72_\Engine_6928_2efc178dfd30ae4f91d4f6777341b855~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Map</DefaultTab>
+              <Hints>
+                <Map>
+                  <BaseMap>[No Base Map]</BaseMap>
+                </Map>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.SpatialInfo.SpatialInfo">
+        <Position x="342" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SpatialObj field="Centroid" />
+          <SelectedItems>
+            <Item name="AreaKm" />
+            <Item name="AreaMi" />
+            <Item name="RectObj" />
+            <Item name="RectPolygon" />
+            <Item name="RectXY" />
+            <Item name="CentroidObj" />
+            <Item name="CentroidXY" />
+            <Item name="EndPointsObj" />
+            <Item name="EndPointsXY" />
+            <Item name="LengthKm" />
+            <Item name="LengthMi" />
+            <Item name="NumParts" />
+            <Item name="NumPoints" />
+            <Item name="PeanoKey" />
+            <Item name="ObjType" />
+          </SelectedItems>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSpatialInfo" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="450" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\palsd\AppData\Local\Temp\Engine_6928_9bac1d4547c2ed4db7d81f94fc841e72_\Engine_6928_6e949ce9c9f3bd498f60b6d59578c5a7~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Map</DefaultTab>
+              <Hints>
+                <Map>
+                  <BaseMap>Latest:CloudMade</BaseMap>
+                </Map>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.PolyBuild.PolyBuild">
+        <Position x="342" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SpatialObj field="Centroid" />
+          <GroupField field="borough" />
+          <BuildType>SequencePolygon</BuildType>
+          <SequenceField field="" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxPolyBuild" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="462" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\palsd\AppData\Local\Temp\Engine_6928_9bac1d4547c2ed4db7d81f94fc841e72_\Engine_6928_6f7dd6133da5d6428bd3f87dea177d23~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Map</DefaultTab>
+              <Hints>
+                <Map>
+                  <BaseMap>[No Base Map]</BaseMap>
+                </Map>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="66" y="546" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">D:\workspace\alteryx\Datathon2024\DPR\workflows\data\IndoorPoolsDataprep.yxdb</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>IndoorPoolsDataprep.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="borough" size="1" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\Preparation\01_NYCParksPools.csv" type="String" />
+            <Field name="gispropnum" size="5" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\Preparation\01_NYCParksPools.csv" type="String" />
+            <Field name="location" size="7" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\Preparation\01_NYCParksPools.csv" type="String" />
+            <Field name="name" size="35" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\Preparation\01_NYCParksPools.csv" type="V_String" />
+            <Field name="polygon" size="4885" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\Preparation\01_NYCParksPools.csv" type="V_String" />
+            <Field name="the_geom" size="13884" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\Preparation\02_DPRPools.csv" type="V_String" />
+            <Field name="pooltype" size="12" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\Preparation\02_DPRPools.csv" type="String" />
+            <Field name="shape_star" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\Preparation\02_DPRPools.csv" type="Double" />
+            <Field name="shape_stle" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\Preparation\02_DPRPools.csv" type="Double" />
+            <Field name="Size" size="17" source="File: D:\workspace\alteryx\Datathon2024\DPR\workflows\data\IndoorPoolsDataprep.yxdb" type="V_String" />
+            <Field name="Accessible" size="1" source="File: D:\workspace\alteryx\Datathon2024\DPR\workflows\data\IndoorPoolsDataprep.yxdb" type="V_String" />
+            <Field name="lat" size="7" source="File: D:\workspace\alteryx\Datathon2024\DPR\workflows\data\IndoorPoolsDataprep.yxdb" type="V_String" />
+            <Field name="lon" size="8" source="File: D:\workspace\alteryx\Datathon2024\DPR\workflows\data\IndoorPoolsDataprep.yxdb" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>DataPrepSpatial</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="4495a1b4-4e5c-4893-80ac-3c676e61b097" />
+      <Telemetry>
+        <PreviousWorkflowId value="c909b640-597d-44e6-8a0c-c81b90815eda" />
+        <OriginWorkflowId value="715db432-bd04-408a-a448-478335be571a" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

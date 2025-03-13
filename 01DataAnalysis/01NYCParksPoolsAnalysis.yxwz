@@ -1,0 +1,978 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="28">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="42">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="79" y="54" width="804" height="60" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text />
+          <Font name="Segoe UI" size="20.25" style="0" />
+          <TextColor name="White" />
+          <FillColor r="13" g="35" b="69" />
+          <Shape shape="0" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="43">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="439" y="54" width="444" height="60" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>This workflow downloads the  NYC Pools data dataset and provides multiple views to perform data analysis. Navigate through the tabs to select views</Text>
+          <Font name="Segoe UI" size="9" style="0" />
+          <TextColor name="White" />
+          <FillColor r="111" g="111" b="111" />
+          <Shape shape="3" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="44">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="79" y="126" width="408" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>1) Run as analytical app</Text>
+          <Font name="Segoe UI" size="8.25" style="1" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="1" />
+          <Justification Justification="1" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="45">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="487" y="126" width="396" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>2) Select a Browse tool to view its output in the Results window.</Text>
+          <Font name="Segoe UI" size="8.25" style="1" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="1" />
+          <Justification Justification="1" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="46">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="79" y="54" width="311" height="60" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>NYC Pools data analysis</Text>
+          <Font name="Segoe UI" size="20.25" style="0" />
+          <TextColor name="White" />
+          <FillColor r="13" g="35" b="69" />
+          <Shape shape="3" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="55">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="78" y="162" width="804" height="60" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>About Data: NYC Parks Pools  (Recreation)
+This dataset consists of indoor and outdoor pools under the jurisdiction of NYC Parks.
+https://data.cityofnewyork.us/Recreation/NYC-Parks-Pools/y5rm-wagw/about_data
+Rows 91 | Columns 11 | Each row is a Pool</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="54">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="846" y="401" width="482" height="677" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Data summary for the dataset selected</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Data summary for the dataset selected</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="13">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1051" y="510" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\palsd\AppData\Local\Temp\Engine_12848_d38edbc99ef9d14da7f91a05dc028e23_\Engine_12848_1dd1f04548048747afd1f2106050ab2d~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name>01 Raw File view</Name>
+              <DefaultAnnotationText>01 Raw File view</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="15">
+          <GuiSettings>
+            <Position x="907" y="714" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="Select Fields">borough=True,communityboard=True,councildistrict=True,parkdistrict=True,gispropnum=True,location=True,name=True,omppropid=True,system=True,polygon=False,pooltype=True,FileName=False</Value>
+              <Value name="Sample Data">False</Value>
+              <Value name="Number">True</Value>
+              <Value name="NNumber">5000</Value>
+              <Value name="Percent">False</Value>
+              <Value name="NPercent">10</Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name>PoolsData Summary</Name>
+              <AnnotationText>PoolsData Summary</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Interactive">
+              <RecordInfo>
+                <Field name="Text" size="1073741823" source="Report:Text:" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="Reports">
+              <RecordInfo>
+                <Field name="Desc" size="64" source="Formula: (Multiple Sources)" type="V_String" />
+                <Field name="Report" size="1073741823" source="Report:Table:Basic:" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Name" size="15" source="Summarize: GroupBy - Name" type="String" />
+                <Field name="Field Category" size="64" source="Formula: (Multiple Sources)" type="String" />
+                <Field name="Min" size="1" type="String" />
+                <Field name="Max" size="1" type="String" />
+                <Field name="Median" source="Summarize: Median - Value" type="Double" />
+                <Field name="Std. Dev." source="Summarize: StdDev - Value" type="Double" />
+                <Field name="Percent Missing" source="Formula: (Multiple Sources)" type="Double" />
+                <Field name="Unique Values" source="Summarize: Count - Name" type="Int64" />
+                <Field name="Mean" source="Summarize: Avg - Value" type="Double" />
+                <Field name="Layout" size="1073741823" source="Report:Layout:" type="V_WString" />
+                <Field name="Remarks" size="1073741823" source="Summarize: Concat - Value" type="V_WString" />
+                <Field name="Shortest_Value" size="1073741823" source="Summarize: Shortest - Value" type="V_WString" />
+                <Field name="Longest_Value" size="1073741823" source="Summarize: Longest - Value" type="V_WString" />
+                <Field name="MinValueCount" source="Summarize: Count - Name" type="Int64" />
+                <Field name="MaxValueCount" source="Summarize: Count - Name" type="Int64" />
+                <Field name="Latest Date" size="64" source="Formula: DateTimeFormat([Max_Value],&quot;%m/%d/%Y %H:00&quot;)" type="String" />
+                <Field name="Earliest Date" size="64" source="Formula: DateTimeFormat([Min_Value],&quot;%m/%d/%Y %H:00&quot;)" type="String" />
+                <Field name="Interval" size="64" source="Formula: (Multiple Sources)" type="V_WString" />
+                <Field name="ObjType" size="12" source="Summarize: GroupBy - ObjType" type="String" />
+                <Field name="Avg_AreaSqMi" source="Summarize: Avg - AreaSqMi" type="Double" />
+                <Field name="Avg_LengthMi" source="Summarize: Avg - LengthMi" type="Double" />
+                <Field name="Avg_NumPoints" source="Summarize: Avg - NumPoints" type="Double" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings Macro="Predictive Tools\Field_Summary_Report.yxmc" />
+        </Node>
+        <Node ToolID="16">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1051" y="606" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\palsd\AppData\Local\Temp\Engine_12848_d38edbc99ef9d14da7f91a05dc028e23_\Engine_12848_a09865ebc453284a9d4922e0de8f71ae~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Report</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name>03 Data Summary</Name>
+              <DefaultAnnotationText>03 Data Summary</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="18">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1051" y="714" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\palsd\AppData\Local\Temp\Engine_12848_d38edbc99ef9d14da7f91a05dc028e23_\Engine_12848_7ad4f80d06d11b418464609131170929~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Report</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name>04 Interactive Summary</Name>
+              <AnnotationText>04 Interactive Summary</AnnotationText>
+              <DefaultAnnotationText>04 Interactive Summary</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="19">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BasicDataProfile.BasicDataProfile">
+            <Position x="907" y="834" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Limit_UniqueCount>10000</Limit_UniqueCount>
+              <Limit_UniqueValuesSize>1000</Limit_UniqueValuesSize>
+              <IsMetric value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name>Basic Data Profile</Name>
+              <AnnotationText>Basic Data Profile</AnnotationText>
+              <DefaultAnnotationText>Basic Data Profile</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="FieldName" size="1073741823" type="V_WString" />
+                <Field name="Name" size="1073741823" type="V_WString" />
+                <Field name="Value" size="1073741823" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="OutputSample">
+              <RecordInfo>
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBasicDataProfile" />
+        </Node>
+        <Node ToolID="29">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1051" y="834" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\palsd\AppData\Local\Temp\Engine_12848_d38edbc99ef9d14da7f91a05dc028e23_\Engine_12848_1eb73bd573c1f84d8c5ff0031809a2f1~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name>02 Data Profile View</Name>
+              <DefaultAnnotationText>02 Data Profile View</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="39">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1063" y="978" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\palsd\AppData\Local\Temp\Engine_12848_d38edbc99ef9d14da7f91a05dc028e23_\Engine_12848_1900a46e34db074aa74b7a9d67852f99~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Report</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name>05 Field View</Name>
+              <DefaultAnnotationText>05 Field View</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="40">
+          <GuiSettings>
+            <Position x="907" y="966" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="FrequencyFields">&lt;Field field="borough" selected="True" /&gt;&lt;Field field="communityboard" selected="True" /&gt;&lt;Field field="councildistrict" selected="True" /&gt;&lt;Field field="parkdistrict" selected="True" /&gt;&lt;Field field="gispropnum" selected="True" /&gt;&lt;Field field="location" selected="True" /&gt;&lt;Field field="name" selected="True" /&gt;&lt;Field field="omppropid" selected="True" /&gt;&lt;Field field="system" selected="True" /&gt;&lt;Field field="pooltype" selected="True" /&gt;&lt;Field field="*Unknown" selected="False" /&gt;</Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name>Frequency Table</Name>
+              <AnnotationText>Frequency Table</AnnotationText>
+              <DefaultAnnotationText>Frequency Table</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Data">
+              <RecordInfo>
+                <Field name="Field_Name" size="15" source="Summarize: GroupBy - Name" type="String" />
+                <Field name="Field_Value" size="100000" source="Summarize: GroupBy - Value" type="V_WString" />
+                <Field name="Frequency" source="Summarize: Count - Name" type="Int64" />
+                <Field name="Percent" scale="2" size="19" source="Formula: ([Frequency]/[Total Records])*100" type="FixedDecimal" />
+                <Field name="Cumulative Frequency" source="RunningTotal: Total of Frequency" type="Int64" />
+                <Field name="Cumulative Percent" scale="2" size="19" source="Formula: ([RunTot_Frequency]/[Total Records])*100" type="FixedDecimal" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="Interactive">
+              <RecordInfo>
+                <Field name="Text" size="1073741823" source="Report:Text:" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="Report">
+              <RecordInfo>
+                <Field name="Name" size="15" source="Summarize: GroupBy - Name" type="String" />
+                <Field name="Message" size="254" source="Formula: IF [Type] IN (&quot;Byte&quot;, &quot;Int16&quot;, &quot;Int32&quot;, &quot;Int64&quot;)&#xA;AND [UniqueValues] &lt;= 10&#xA;THEN 'This field has a small number of unique values, and appears to be categorical. Consider changing the field data type to &quot;string&quot; if you intend to use it as a categorical field later in your processing.'&#xA;ELSE &quot;&quot;&#xA;ENDIF" type="String" />
+                <Field name="Table" size="1073741823" source="Report:Table:Basic:" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings Macro="Predictive Tools\Frequency.yxmc" />
+        </Node>
+        <Node ToolID="48">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="871" y="450" width="432" height="36" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>3. Analyze Data &amp; provide summaries</Text>
+              <Font name="Arial" size="14.25" style="1" />
+              <TextColor name="White" />
+              <FillColor r="0" g="123" b="193" />
+              <Shape shape="0" />
+              <Justification Justification="0" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="52">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="54" y="617" width="647" height="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Download CSV data from NYC OpenData Endpoint</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Download CSV data from NYC OpenData Endpoint</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="10">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DynamicInput.DynamicInput">
+            <Position x="462" y="762" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <InputConfiguration>
+                <Configuration>
+                  <Passwords />
+                  <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="FileName">NYCParksPools.csv</File>
+                  <FormatSpecificOptions>
+                    <HeaderRow>True</HeaderRow>
+                    <IgnoreErrors>False</IgnoreErrors>
+                    <AllowShareWrite>False</AllowShareWrite>
+                    <ImportLine>1</ImportLine>
+                    <FieldLen>100000</FieldLen>
+                    <SingleThreadRead>False</SingleThreadRead>
+                    <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                    <Delimeter>,</Delimeter>
+                    <QuoteRecordBreak>False</QuoteRecordBreak>
+                    <CodePage>65001</CodePage>
+                  </FormatSpecificOptions>
+                </Configuration>
+              </InputConfiguration>
+              <Mode>ReadList</Mode>
+              <ReadList_Field>FileName</ReadList_Field>
+              <ReadList_Type>Path</ReadList_Type>
+              <ErrorBehaviour>Warning</ErrorBehaviour>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name><![CDATA[Read Data ]]></Name>
+              <AnnotationText>Read Data</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="borough" size="100000" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\NYCParksPools.csv" type="V_WString" />
+                <Field name="communityboard" size="100000" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\NYCParksPools.csv" type="V_WString" />
+                <Field name="councildistrict" size="100000" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\NYCParksPools.csv" type="V_WString" />
+                <Field name="parkdistrict" size="100000" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\NYCParksPools.csv" type="V_WString" />
+                <Field name="gispropnum" size="100000" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\NYCParksPools.csv" type="V_WString" />
+                <Field name="location" size="100000" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\NYCParksPools.csv" type="V_WString" />
+                <Field name="name" size="100000" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\NYCParksPools.csv" type="V_WString" />
+                <Field name="omppropid" size="100000" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\NYCParksPools.csv" type="V_WString" />
+                <Field name="system" size="100000" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\NYCParksPools.csv" type="V_WString" />
+                <Field name="polygon" size="100000" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\NYCParksPools.csv" type="V_WString" />
+                <Field name="pooltype" size="100000" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\NYCParksPools.csv" type="V_WString" />
+                <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDynamicInput" />
+        </Node>
+        <Node ToolID="11">
+          <GuiSettings Plugin="AlteryxConnectorGui.Download.Download">
+            <Position x="342" y="762" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <URLField>URL</URLField>
+              <OutputMode>SpecificFile</OutputMode>
+              <OutputFileNameField>FileName</OutputFileNameField>
+              <EncodeURLs value="False" />
+              <Headers>
+                <NameValues />
+                <Fields orderChanged="False">
+                  <Field name="Data" selected="False" />
+                  <Field name="URL" selected="False" />
+                  <Field name="FileName" selected="False" />
+                  <Field name="*Unknown" selected="False" />
+                </Fields>
+              </Headers>
+              <Payload>
+                <HTTPAction>GET</HTTPAction>
+                <QueryStringBodyMode>Compose</QueryStringBodyMode>
+                <ComposeNameValues />
+                <ComposeFields orderChanged="False">
+                  <Field name="Data" selected="False" />
+                  <Field name="URL" selected="False" />
+                  <Field name="FileName" selected="False" />
+                  <Field name="*Unknown" selected="False" />
+                </ComposeFields>
+              </Payload>
+              <numConnections>2</numConnections>
+              <Timeout>600</Timeout>
+              <EnableRPM value="False" />
+              <DcmAdvancedAuth value="False" />
+              <Password />
+              <UserName />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name>Get data</Name>
+              <AnnotationText>Get data</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Data" size="2147483647" source="TextInput:" type="V_String" />
+                <Field name="URL" size="2147483647" source="TextInput:" type="V_String" />
+                <Field name="FileName" size="2147483647" source="TextInput:" type="V_String" />
+                <Field name="DownloadHeaders" size="2147483647" source="Download" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxConnectorEngine.dll" EngineDllEntryPoint="AlteryxDownload" />
+        </Node>
+        <Node ToolID="12">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+            <Position x="79" y="774" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <NumRows value="1" />
+              <Fields>
+                <Field name="Data" />
+                <Field name="URL" />
+                <Field name="FileName" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>NYCParksPools</c>
+                  <c>https://data.cityofnewyork.us/resource/y5rm-wagw.csv</c>
+                  <c>01_NYCParksPools.csv</c>
+                </r>
+              </Data>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name>NYCPools DatSets</Name>
+              <AnnotationText>NYCPools DataSets</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Data" size="2147483647" source="TextInput:" type="V_String" />
+                <Field name="URL" size="2147483647" source="TextInput:" type="V_String" />
+                <Field name="FileName" size="2147483647" source="TextInput:" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+        </Node>
+        <Node ToolID="34">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="223" y="774" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>=</Operator>
+                <Field>Data</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2024-03-10 23:19:04</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <Operand>NYCParksPools</Operand>
+                  <StartDate>2024-03-10 23:19:04</StartDate>
+                  <EndDate>2024-03-10 23:19:04</EndDate>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name>Select Datset</Name>
+              <AnnotationText>Select Datset</AnnotationText>
+              <DefaultAnnotationText>Select Datset</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="True">
+              <RecordInfo>
+                <Field name="Data" size="2147483647" source="TextInput:" type="V_String" />
+                <Field name="URL" size="2147483647" source="TextInput:" type="V_String" />
+                <Field name="FileName" size="2147483647" source="TextInput:" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="False">
+              <RecordInfo>
+                <Field name="Data" size="2147483647" source="TextInput:" type="V_String" />
+                <Field name="URL" size="2147483647" source="TextInput:" type="V_String" />
+                <Field name="FileName" size="2147483647" source="TextInput:" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="51">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="103" y="666" width="360" height="36" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>2. Download dataset and read data</Text>
+              <Font name="Arial" size="12" style="1" />
+              <TextColor name="White" />
+              <FillColor r="0" g="123" b="193" />
+              <Shape shape="0" />
+              <Justification Justification="0" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="53">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="487" y="846" width="100" height="40" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>Ignore warning and proceed to execute workflow</Text>
+              <Font name="Arial" size="8.25" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="White" />
+              <Shape shape="0" />
+              <Justification Justification="4" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="56">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+            <Position x="594" y="762" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SortInfo locale="1033">
+                <Field field="gispropnum" order="Ascending" />
+              </SortInfo>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>gispropnum - Ascending</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="borough" size="100000" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\NYCParksPools.csv" type="V_WString" />
+                <Field name="communityboard" size="100000" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\NYCParksPools.csv" type="V_WString" />
+                <Field name="councildistrict" size="100000" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\NYCParksPools.csv" type="V_WString" />
+                <Field name="parkdistrict" size="100000" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\NYCParksPools.csv" type="V_WString" />
+                <Field name="gispropnum" size="100000" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\NYCParksPools.csv" type="V_WString" />
+                <Field name="location" size="100000" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\NYCParksPools.csv" type="V_WString" />
+                <Field name="name" size="100000" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\NYCParksPools.csv" type="V_WString" />
+                <Field name="omppropid" size="100000" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\NYCParksPools.csv" type="V_WString" />
+                <Field name="system" size="100000" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\NYCParksPools.csv" type="V_WString" />
+                <Field name="polygon" size="100000" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\NYCParksPools.csv" type="V_WString" />
+                <Field name="pooltype" size="100000" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\NYCParksPools.csv" type="V_WString" />
+                <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="50">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="126" y="257" width="410" height="301" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Dataset selector for app interface</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Dataset selector for app interface</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="35">
+          <GuiSettings Plugin="AlteryxGuiToolkit.Questions.DropDownListBox.DropDown">
+            <Position x="223" y="366" width="59" height="59" />
+          </GuiSettings>
+          <Properties>
+            <Configuration />
+            <Annotation DisplayMode="0">
+              <Name>Select Pools Dataset</Name>
+              <DefaultAnnotationText>Select Pools Dataset</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="36">
+          <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+            <Position x="235" y="474" width="59" height="59" />
+          </GuiSettings>
+          <Properties>
+            <Configuration />
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Update Value</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="49">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="151" y="306" width="360" height="36" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text><![CDATA[1. Analytical App Interface ]]></Text>
+              <Font name="Arial" size="12" style="1" />
+              <TextColor name="White" />
+              <FillColor r="0" g="123" b="193" />
+              <Shape shape="0" />
+              <Justification Justification="0" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="15" Connection="Reports" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Interactive" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="29" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="40" Connection="Interactive" />
+      <Destination ToolID="39" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="56" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="34" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="36" Connection="Action" />
+      <Destination ToolID="34" Connection="Action" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="True" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="56" Connection="Output" />
+      <Destination ToolID="40" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="56" Connection="Output" />
+      <Destination ToolID="15" Connection="Field Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="56" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="56" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="35" Connection="Question" />
+      <Destination ToolID="36" Connection="Question" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <Constants>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Select Pools Dataset</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>01NYCParksPoolsAnalysis</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="063e478b-db3a-4454-ac7c-f3a20ebeaa62" />
+      <Telemetry>
+        <PreviousWorkflowId value="b388e1bf-c4c9-4311-9e65-ce9235659d44" />
+        <OriginWorkflowId value="7e29f088-6170-4faf-b24f-42135faab2cf" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+    <RuntimeProperties>
+      <Actions>
+        <NoCondition>
+          <Type>NoCondition</Type>
+          <Description>(Always Run)</Description>
+          <True>
+            <Action>
+              <Type>UpdateValue</Type>
+              <Description />
+              <ToolId value="36" />
+              <Mode>Simple</Mode>
+              <Variable />
+              <Replace value="True" />
+              <ReplaceText>NYCParksPools</ReplaceText>
+              <Destination>34/Simple/Operands/Operand</Destination>
+            </Action>
+          </True>
+        </NoCondition>
+      </Actions>
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (28)</Name>
+          <ToolId value="28" />
+          <Questions>
+            <Question>
+              <Type>ListBox</Type>
+              <Description>NYC Pools data analysis</Description>
+              <Name>Select Pools Dataset</Name>
+              <ToolId value="35" />
+              <Multiple value="False" />
+              <Default />
+              <Mode>Manual</Mode>
+              <Manual_Values><![CDATA[All Pools 5419541n5148905f1n0941f5809 NYCParksPools
+]]></Manual_Values>
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Wizard</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="0" />
+      <MacroInputs />
+      <MacroOutputs />
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="29" Selected="True" />
+        <Tool ToolId="16" Selected="True" />
+        <Tool ToolId="39" Selected="True" />
+        <Tool ToolId="40" Selected="True" />
+        <Tool ToolId="18" Selected="True" />
+        <Tool ToolId="15" Selected="True" />
+        <Tool ToolId="13" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>

@@ -1,0 +1,1433 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="73">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="809" y="257" width="529" height="773" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Report formatting</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Report formatting</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="23">
+          <GuiSettings Plugin="PortfolioPluginsGui.ComposerTable.PortfolioComposerTable">
+            <Position x="834" y="834" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TableMode>Basic</TableMode>
+              <GroupingFields orderChanged="False" />
+              <Width>100%</Width>
+              <ShowHeader value="True" />
+              <ShowBarGraph value="False" />
+              <TableFields orderChanged="False">
+                <Field name="BOROUGH" selected="True" Alignment="Left" Alias="Borough" Width="" />
+                <Field name="Diving" selected="True" Alignment="Right" />
+                <Field name="Intermediate" selected="True" Alignment="Right" />
+                <Field name="Mini" selected="True" Alignment="Right" />
+                <Field name="Olympic" selected="True" Alignment="Right" />
+                <Field name="Wading" selected="True" Alignment="Right" />
+                <Field name="Total pools" selected="True" Alignment="Right" Alias="Total pools" Width="" />
+                <Field name="*Unknown" selected="True" Alignment="Right" Width="" Places="0" />
+              </TableFields>
+              <TableStyles>
+                <Style Name="Data" Font="Arial" Size="8" TextColor="#000000" BackColor="#ffffff" AltColor="#f0f0f0" RowGroup="1" />
+                <Style Name="Header" Font="Arial" Size="10" TextColor="#000000" BackColor="#dbdbdb" />
+                <Style Name="Borders" Width="1" DataColor="#000000" HeaderColor="#000000" RowBorder="None" BasicColBorder="Default (Use Per Column Setting)" />
+                <Style Name="Table" CellPadding="0" ColumnPadding="0" TableBorder="true" Width="1" BorderColor="#000000" />
+              </TableStyles>
+              <StyleRules>
+                <Rule Name="35e060e2-5e8e-4a14-a054-618140a4b0e7">
+                  <RowRule value="False" />
+                  <HighPrecedence value="False" />
+                  <Field>BOROUGH</Field>
+                  <Test>Simple</Test>
+                  <ApplyTo>Data</ApplyTo>
+                  <SimpleVar>Total pools</SimpleVar>
+                  <SimpleOp>==</SimpleOp>
+                  <SimpleConst>12</SimpleConst>
+                  <Formula>1</Formula>
+                  <Style TextColor="#00ff00" />
+                  <PrettyName>BOROUGH Rule 1</PrettyName>
+                </Rule>
+                <Rule Name="1a67da6a-2a37-46ec-a45e-3bcdd2d5bb45">
+                  <RowRule value="False" />
+                  <HighPrecedence value="False" />
+                  <Field>Total pools</Field>
+                  <Test>Always</Test>
+                  <ApplyTo>Data</ApplyTo>
+                  <SimpleVar />
+                  <SimpleOp>==</SimpleOp>
+                  <SimpleConst>1</SimpleConst>
+                  <Formula>1</Formula>
+                  <Style BackColor="#00ff80" />
+                  <PrettyName>Total pools Rule 1</PrettyName>
+                </Rule>
+              </StyleRules>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Basic Table</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerTablePlugin" />
+        </Node>
+        <Node ToolID="24">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="954" y="882" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\palsd\AppData\Local\Temp\Engine_5836_3dff2aa905d38945ab9bd8f3eee2ecbe_\Engine_5836_fed208a8df4ab04ca0d36a765635933c~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Report</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="33">
+          <GuiSettings Plugin="PlotlyCharting">
+            <Position x="834" y="750" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ChartingFields>
+                <Traces json:Array="true" xmlns:json="http://james.newtonking.com/projects/json">
+                  <type>bar</type>
+                  <mode>markers</mode>
+                  <valuessrc>BOROUGH</valuessrc>
+                  <orientation>v</orientation>
+                  <xsrc>BOROUGH</xsrc>
+                  <ysrc>Count</ysrc>
+                  <name>Total Pools per Borough</name>
+                  <textposition>None</textposition>
+                  <marker>
+                    <line>
+                      <width>0</width>
+                    </line>
+                  </marker>
+                  <showlegend>false</showlegend>
+                </Traces>
+                <Layout>
+                  <title>
+                    <text>Total pools per boroughs</text>
+                  </title>
+                  <font>
+                    <family>sans-serif</family>
+                    <size>12</size>
+                  </font>
+                  <autosize>false</autosize>
+                  <width>460</width>
+                  <height>300</height>
+                  <showlegend>true</showlegend>
+                  <hovermode>closest</hovermode>
+                  <margin>
+                    <pad>0</pad>
+                    <t>29</t>
+                    <b>29</b>
+                    <l>29</l>
+                    <r>29</r>
+                  </margin>
+                  <xaxis>
+                    <range>-0.56645717253538264</range>
+                    <range>5.5405566182654677</range>
+                    <autorange>false</autorange>
+                    <title>
+                      <text>BOROUGH</text>
+                    </title>
+                    <type>category</type>
+                    <showspikes>false</showspikes>
+                  </xaxis>
+                  <yaxis>
+                    <range>0.60400546795107224</range>
+                    <range>70.411574940915841</range>
+                    <autorange>false</autorange>
+                    <title>
+                      <text>Total pools</text>
+                    </title>
+                    <type>linear</type>
+                    <showspikes>false</showspikes>
+                  </yaxis>
+                  <bargap>0.16000000000000003</bargap>
+                  <ppi>72</ppi>
+                  <legend>
+                    <font>
+                      <size>12</size>
+                    </font>
+                    <borderwidth>0</borderwidth>
+                  </legend>
+                </Layout>
+              </ChartingFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Borough's pools Interactive chart</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="ComposerInteractiveCharting" />
+        </Node>
+        <Node ToolID="34">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="894" y="690" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\palsd\AppData\Local\Temp\Engine_5836_3dff2aa905d38945ab9bd8f3eee2ecbe_\Engine_5836_0b21b59442439c449c441463c592acc1~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Report</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="40">
+          <GuiSettings Plugin="PortfolioPluginsGui.ComposerText.PortfolioComposerText">
+            <Position x="834" y="930" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Images />
+              <Output>Text</Output>
+              <HeaderMode value="False" />
+              <RawMode value="False" />
+              <ValidatePCXML value="True" />
+              <Message />
+              <RichTextMode value="True" />
+              <RichTextString><![CDATA[{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+\viewkind4\uc1\pard\fs24 Based on the above two maps, indoor vs outdoor, and tables vs chart, it can be concluded that most of the pools  are in the "Manhattan" borough compared to the other boroughs. One may infer that there is some equity in pools in NYC. \par
+\par
+About Data:\par
+This is the report about the Swimming pools data provided bye the Department of Parks & Recreations(DPR) powered by NYC OpenData endpoints.\par
+\par
+There are total six datasets available under the "recreation" category. Of which four are considered for this anlaysis. And the data, charts, tables and maps represented in this reprort are based on this data.\par
+\par
+\par
+}
+]]></RichTextString>
+              <Styles>
+                <Style Name="TextStyle" />
+              </Styles>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Report body</AnnotationText>
+              <DefaultAnnotationText>Based on the above two maps, i...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerTextPlugin" />
+        </Node>
+        <Node ToolID="59">
+          <GuiSettings Plugin="VisualLayout">
+            <Position x="1050" y="786" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <LayoutFields>
+                <Document>
+                  <TempFileType>pdf</TempFileType>
+                  <PortraitMode value="true" />
+                  <RenderType>PDF</RenderType>
+                  <PaperType bottom="48" height="1056" left="48" right="48" top="48" width="816">
+                    <PageType>Letter (8.5in x 11in)</PageType>
+                    <MarginType>0.5in</MarginType>
+                  </PaperType>
+                </Document>
+                <Layout>
+                  <Node fusedChildren="false" key="1" orientation="vertical" repeatDirection="vertical">
+                    <Node fusedChildren="false" key="2" orientation="vertical" repeatDirection="vertical">
+                      <Node fusedChildren="false" key="3" orientation="vertical" repeatDirection="vertical">
+                        <Node connectionName="#6" fieldName="Text" height="24" isFused="false" isLocked="true" key="4" left="0" orientation="horizontal" repeatDirection="vertical" source="Report:Text:" subWidth0="720" subWidthCount="1" top="0" width="720" />
+                        <Node fusedChildren="false" key="5" orientation="vertical" repeatDirection="vertical">
+                          <Node fusedChildren="false" key="6" orientation="horizontal" repeatDirection="vertical">
+                            <Node fusedChildren="false" key="7" orientation="vertical" repeatDirection="vertical">
+                              <Node connectionName="#4" fieldName="Map" height="267.75" isFused="false" isLocked="true" key="8" left="0" orientation="horizontal" repeatDirection="vertical" source="Report:Map:" subWidth0="349" subWidthCount="1" top="32" width="355" />
+                              <Node connectionName="#7" fieldName="Text" height="60" isFused="false" isLocked="false" key="9" left="0" orientation="horizontal" repeatDirection="vertical" source="Report:Text:" subWidth0="130" subWidthCount="1" top="0" width="130" />
+                            </Node>
+                            <Node fusedChildren="false" key="10" orientation="vertical" repeatDirection="vertical">
+                              <Node connectionName="#5" fieldName="Map" height="267" isFused="false" isLocked="true" key="11" left="7" orientation="horizontal" repeatDirection="vertical" source="Report:Map:" subWidth0="348" subWidthCount="1" top="49" width="354" />
+                              <Node connectionName="#8" fieldName="Text" height="24" isFused="false" isLocked="false" key="12" left="0" orientation="horizontal" repeatDirection="vertical" source="Report:Text:" subWidth0="144" subWidthCount="1" top="0" width="144" />
+                            </Node>
+                          </Node>
+                          <Node connectionName="#2" fieldName="Table" height="109" isFused="false" isLocked="true" key="13" left="0" orientation="horizontal" repeatDirection="vertical" source="Report:Table:Basic:" subWidth0="705" subWidthCount="1" top="0" width="705" />
+                        </Node>
+                      </Node>
+                      <Node connectionName="#1" fieldName="Chart" height="306" isFused="false" isLocked="false" key="14" left="0" orientation="horizontal" repeatDirection="vertical" source="Report:Chart:" subWidth0="466" subWidthCount="1" top="0" width="466" />
+                    </Node>
+                    <Node connectionName="#3" fieldName="Text" height="240" isFused="false" isLocked="false" key="15" left="0" orientation="horizontal" repeatDirection="vertical" source="Report:Text:" subWidth0="720" subWidthCount="1" top="0" width="720" />
+                  </Node>
+                </Layout>
+                <TempFiles>{"#2":"C:\\Users\\palsd\\AppData\\Local\\Temp\\Engine_5836_3dff2aa905d38945ab9bd8f3eee2ecbe_\\Engine_4552_dfb95d24b5264481829ab5b5f9f403c1_.yxdb","#1":"C:\\Users\\palsd\\AppData\\Local\\Temp\\Engine_5836_3dff2aa905d38945ab9bd8f3eee2ecbe_\\Engine_4552_ec805e280650499b99b2116e08dbcf8d_.yxdb","#3":"C:\\Users\\palsd\\AppData\\Local\\Temp\\Engine_5836_3dff2aa905d38945ab9bd8f3eee2ecbe_\\Engine_4552_42fe6c693b06474095865040e2e66cfb_.yxdb","#5":"C:\\Users\\palsd\\AppData\\Local\\Temp\\Engine_5836_3dff2aa905d38945ab9bd8f3eee2ecbe_\\Engine_4552_459e50568f2248019b9a0191559bfe70_.yxdb","#4":"C:\\Users\\palsd\\AppData\\Local\\Temp\\Engine_5836_3dff2aa905d38945ab9bd8f3eee2ecbe_\\Engine_4552_f0d9f176df624b68a597f79a94c4f24f_.yxdb","#6":"C:\\Users\\palsd\\AppData\\Local\\Temp\\Engine_5836_3dff2aa905d38945ab9bd8f3eee2ecbe_\\Engine_4552_b7d4192049384c97aeb517c6ea8e0fa0_.yxdb","#7":"C:\\Users\\palsd\\AppData\\Local\\Temp\\Engine_5836_3dff2aa905d38945ab9bd8f3eee2ecbe_\\Engine_4552_f5d4d8062e1b466ab08e5544f00b9e44_.yxdb","#8":"C:\\Users\\palsd\\AppData\\Local\\Temp\\Engine_5836_3dff2aa905d38945ab9bd8f3eee2ecbe_\\Engine_4552_ada31c82820349e4ab82371560590987_.yxdb"}</TempFiles>
+                <OriginalSnippets>{"#7":{"Text":["C:\\Users\\palsd\\AppData\\Local\\Temp\\Alteryx_4552_b1516894-4c15-4a67-8bff-61c010d31b35_\\Alteryx_4552_477b2b9b-30aa-4b1d-a4a0-86b3fd22da65_.html"]},"#3":{"Text":["C:\\Users\\palsd\\AppData\\Local\\Temp\\Alteryx_4552_b1516894-4c15-4a67-8bff-61c010d31b35_\\Alteryx_4552_ed79e58b-efa5-4cb0-9bb5-4c5b188b0406_.html"]},"#4":{"Map":["C:\\Users\\palsd\\AppData\\Local\\Temp\\Alteryx_4552_b1516894-4c15-4a67-8bff-61c010d31b35_\\Alteryx_4552_dc78acd8-2b91-4887-ab48-2d1417bc3e58_.html"],"Legend":["C:\\Users\\palsd\\AppData\\Local\\Temp\\Alteryx_4552_b1516894-4c15-4a67-8bff-61c010d31b35_\\Alteryx_4552_94911f08-69cb-47cc-b162-fc49c9d0fcaf_.html"]},"#8":{"Text":["C:\\Users\\palsd\\AppData\\Local\\Temp\\Alteryx_4552_b1516894-4c15-4a67-8bff-61c010d31b35_\\Alteryx_4552_491e5afe-610d-4e1f-9fc0-752ba52d4884_.html"]},"#5":{"Map":["C:\\Users\\palsd\\AppData\\Local\\Temp\\Alteryx_4552_b1516894-4c15-4a67-8bff-61c010d31b35_\\Alteryx_4552_76725c42-6a66-437e-9d02-d3aad997a74c_.html"],"Legend":["C:\\Users\\palsd\\AppData\\Local\\Temp\\Alteryx_4552_b1516894-4c15-4a67-8bff-61c010d31b35_\\Alteryx_4552_e068d170-b257-4283-a444-20ed2ce6ee0d_.html"]},"#1":{"Chart":["C:\\Users\\palsd\\AppData\\Local\\Temp\\Alteryx_4552_b1516894-4c15-4a67-8bff-61c010d31b35_\\Alteryx_4552_652b8ee3-12c9-4077-8fdf-7eeb86a3ee47_.html"]},"#6":{"Text":["C:\\Users\\palsd\\AppData\\Local\\Temp\\Alteryx_4552_b1516894-4c15-4a67-8bff-61c010d31b35_\\Alteryx_4552_6f733b52-2d8f-4dd3-a6b6-f66db94e4211_.html"]},"#2":{"Table":["C:\\Users\\palsd\\AppData\\Local\\Temp\\Alteryx_4552_b1516894-4c15-4a67-8bff-61c010d31b35_\\Alteryx_4552_aa080f64-99cc-4915-9108-f44fc6c80228_.html"]}}</OriginalSnippets>
+                <OriginalThumbnails>{"#7":{},"#3":{},"#4":{},"#8":{},"#5":{},"#1":{},"#6":{},"#2":{"Table":["C:\\Users\\palsd\\AppData\\Local\\Temp\\Alteryx_4552_b1516894-4c15-4a67-8bff-61c010d31b35_\\Alteryx_4552_d8160aa8-d703-405e-816b-fb6bcf99302b_.html"]}}</OriginalThumbnails>
+                <AllowResizing>true</AllowResizing>
+                <CanJoin>false</CanJoin>
+                <VisFolderPath>C:\Users\palsd\AppData\Local\Temp\Alteryx_4552_b1516894-4c15-4a67-8bff-61c010d31b35_</VisFolderPath>
+                <NumDeletions>0</NumDeletions>
+                <NumTinaToggleUses>0</NumTinaToggleUses>
+                <NumSnippetMoves>0</NumSnippetMoves>
+                <NumSnippetRearrangements>0</NumSnippetRearrangements>
+                <NumIncomingConnections>8</NumIncomingConnections>
+              </LayoutFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="ComposerVisualLayout" />
+        </Node>
+        <Node ToolID="60">
+          <GuiSettings>
+            <Position x="1158" y="786" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="CopyrightText">© [CurrentYear] Alteryx, Inc.  All rights reserved. Alteryx is a registered trademark of Alteryx, Inc.</Value>
+              <Value name="InfoText"><![CDATA[@pals This is a sample report submitted for Alteryx Datathon ]]></Value>
+              <Value name="PageNumbers">True</Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings Macro="FooterMacro.yxmc" />
+        </Node>
+        <Node ToolID="61">
+          <GuiSettings Plugin="PortfolioPluginsGui.ComposerRender.PortfolioComposerRender">
+            <Position x="1254" y="786" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFileType>pdf</TempFileType>
+              <BatchMode value="False" />
+              <DataField>Layout</DataField>
+              <Separator>Continuous</Separator>
+              <EmbedDependencies value="False" />
+              <ShowHeader value="False" />
+              <ShowFooter value="True" />
+              <PdfCefOutput value="False" />
+              <FooterField>Footer</FooterField>
+              <OnFirstPage value="True" />
+              <HeaderFooterEdge Distance="0" />
+              <PortraitMode value="True" />
+              <PaperType Width="612" Height="792" Left="36" Right="36" Top="36" Bottom="36" />
+              <DefaultStyles>
+                <Style Name="TextStyle" FontName="Arial" FontSize="14" Justify="Left" ForeColor="#000000" Locale="1033" />
+              </DefaultStyles>
+              <PNGResolution>1</PNGResolution>
+              <PNGLargerAction>squeeze</PNGLargerAction>
+              <PNGLargerThanPageChoice>warning</PNGLargerThanPageChoice>
+              <PNGTransparentBG value="False" />
+              <PNGBackColor value="#ffffff" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerRenderPlugin" />
+        </Node>
+        <Node ToolID="64">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.ReportMap.ReportMap">
+            <Position x="834" y="642" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TemporaryFileLocationXML>C:\Users\palsd\AppData\Local\Temp\Engine_5836_3dff2aa905d38945ab9bd8f3eee2ecbe_\Engine_5836_8b5df635bd6f244b814cf5cc09a4e48b~.xml</TemporaryFileLocationXML>
+              <IsMetric value="False" />
+              <ImageWidth>8</ImageWidth>
+              <ImageHeight>6</ImageHeight>
+              <ImageResolution>1</ImageResolution>
+              <ReferenceMap>Latest:CloudMade</ReferenceMap>
+              <BackgroundColor>#fdfeff</BackgroundColor>
+              <DropShadow>False</DropShadow>
+              <ScaleUnits>Miles</ScaleUnits>
+              <ExpandExtent>10</ExpandExtent>
+              <MinimumWidth>0.5</MinimumWidth>
+              <DataConnections>
+                <DataConnection name="#1">
+                  <ConnectionType>IncomingConnection</ConnectionType>
+                  <Connection>#1</Connection>
+                  <FileName />
+                  <SpatialObj>Centroid</SpatialObj>
+                  <GroupField />
+                  <ThemeField />
+                  <LabelField />
+                </DataConnection>
+                <DataConnection name="#2">
+                  <ConnectionType>IncomingConnection</ConnectionType>
+                  <Connection>#2</Connection>
+                  <FileName />
+                  <SpatialObj>SpatialObj_Built</SpatialObj>
+                  <GroupField />
+                  <ThemeField>shape_star</ThemeField>
+                  <LabelField />
+                </DataConnection>
+              </DataConnections>
+              <Layers>
+                <Layer name="1" order="0">
+                  <LayerType>Points</LayerType>
+                  <isBaseLayer value="False" />
+                  <isReorderedBaseLayer value="False" />
+                  <isRestlyedBaseLayer value="False" />
+                  <baseLabelOverriden value="False" />
+                  <isThemeLayer value="False" />
+                  <DisplayName>#1</DisplayName>
+                  <DataConnection>#1</DataConnection>
+                  <ShowInLegend value="True" />
+                  <ZoomToLayer value="True" />
+                  <Disable value="False" />
+                  <PointStyle />
+                  <ThemeStyle ColorMethod="Ramp" EndColor="#ff0000" ManualTiles="" NoneSpecificValuesAction="Color" NumTiles="5" SpecificValues="" StartColor="#0000ff" TileMethod="SmartTile" UniqueColors="#dc143c,#6495ed,#f0e68c,#228b22,#a9a9a9,#ffa500,#ba55d3,#a0522d,#ff69b4,#4b0082,#d3d3d3,#9acd32,#00ffff,#808000,#ffb6c1" UpperCutoffIncludedExcluded="Excluded" />
+                  <LabelStyle Disabled="false" />
+                </Layer>
+                <Layer name="Base Layers - Points" order="1">
+                  <DisplayName>Base Layers - Points</DisplayName>
+                  <DataConnection />
+                  <LayerType>Placeholder</LayerType>
+                  <ShowLabel value="False" />
+                </Layer>
+                <Layer name="Base Layers - Lines" order="2">
+                  <DisplayName>Base Layers - Lines</DisplayName>
+                  <DataConnection />
+                  <LayerType>Placeholder</LayerType>
+                  <ShowLabel value="False" />
+                </Layer>
+                <Layer name="2" order="3">
+                  <LayerType>Polygons</LayerType>
+                  <isBaseLayer value="False" />
+                  <isReorderedBaseLayer value="False" />
+                  <isRestlyedBaseLayer value="False" />
+                  <baseLabelOverriden value="False" />
+                  <isThemeLayer value="False" />
+                  <DisplayName>#2</DisplayName>
+                  <DataConnection>#2</DataConnection>
+                  <ShowInLegend value="True" />
+                  <ZoomToLayer value="True" />
+                  <Disable value="False" />
+                  <PolygonStyle FillColor="#988576" HatchColor="#000000" HatchStyle="single" Hatched="false" Opacity="50" OutlineColor="#000000" OutlineSize="3" UseFillColor="true" />
+                  <ThemeStyle ColorMethod="Ramp" EndColor="#ff0000" ManualTiles="" NoneSpecificValuesAction="Color" NumTiles="5" SpecificValues="" StartColor="#0000ff" TileMethod="SmartTile" UniqueColors="#dc143c,#6495ed,#f0e68c,#228b22,#a9a9a9,#ffa500,#ba55d3,#a0522d,#ff69b4,#4b0082,#d3d3d3,#9acd32,#00ffff,#808000,#ffb6c1" UpperCutoffIncludedExcluded="Excluded" />
+                  <LabelStyle Disabled="false" />
+                </Layer>
+                <Layer name="Base Layers - Polygons" order="4">
+                  <DisplayName>Base Layers - Polygons</DisplayName>
+                  <DataConnection />
+                  <LayerType>Placeholder</LayerType>
+                  <ShowLabel value="False" />
+                </Layer>
+              </Layers>
+              <Legend>
+                <LegendStyle IconHeight="8" IconWidth="8" Position="Field" Size="8" UseCommaSeparators="false" />
+              </Legend>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Outdoor pools by area</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxReportMap" />
+        </Node>
+        <Node ToolID="65">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="930" y="606" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\palsd\AppData\Local\Temp\Engine_5836_3dff2aa905d38945ab9bd8f3eee2ecbe_\Engine_5836_5e8c4a2ee9a3574fb32e13a8b5a3a2cf~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Report</DefaultTab>
+                  <Hints>
+                    <Map>
+                      <BaseMap>[No Base Map]</BaseMap>
+                    </Map>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="66">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.ReportMap.ReportMap">
+            <Position x="834" y="390" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TemporaryFileLocationXML>C:\Users\palsd\AppData\Local\Temp\Engine_5836_3dff2aa905d38945ab9bd8f3eee2ecbe_\Engine_5836_69b3bcc84e1f9e40bc57ef47d550b063~.xml</TemporaryFileLocationXML>
+              <IsMetric value="False" />
+              <ImageWidth>8</ImageWidth>
+              <ImageHeight>6</ImageHeight>
+              <ImageResolution>1</ImageResolution>
+              <ReferenceMap>Latest:CloudMade</ReferenceMap>
+              <BackgroundColor>#fdfeff</BackgroundColor>
+              <DropShadow>Map</DropShadow>
+              <ScaleUnits>Miles</ScaleUnits>
+              <ExpandExtent>10</ExpandExtent>
+              <MinimumWidth>0.5</MinimumWidth>
+              <DataConnections>
+                <DataConnection name="#1">
+                  <ConnectionType>IncomingConnection</ConnectionType>
+                  <Connection>#1</Connection>
+                  <FileName />
+                  <SpatialObj>SpatialObj_Built</SpatialObj>
+                  <GroupField />
+                  <ThemeField>shape_star</ThemeField>
+                  <LabelField />
+                </DataConnection>
+                <DataConnection name="#2">
+                  <ConnectionType>IncomingConnection</ConnectionType>
+                  <Connection>#2</Connection>
+                  <FileName />
+                  <SpatialObj>Centroid</SpatialObj>
+                  <GroupField />
+                  <ThemeField />
+                  <LabelField />
+                </DataConnection>
+              </DataConnections>
+              <Layers>
+                <Layer name="2" order="0">
+                  <LayerType>Points</LayerType>
+                  <isBaseLayer value="False" />
+                  <isReorderedBaseLayer value="False" />
+                  <isRestlyedBaseLayer value="False" />
+                  <baseLabelOverriden value="False" />
+                  <isThemeLayer value="False" />
+                  <DisplayName>#2</DisplayName>
+                  <DataConnection>#2</DataConnection>
+                  <ShowInLegend value="True" />
+                  <ZoomToLayer value="True" />
+                  <Disable value="False" />
+                  <PointStyle />
+                  <ThemeStyle ColorMethod="Ramp" EndColor="#ff0000" ManualTiles="" NoneSpecificValuesAction="Color" NumTiles="5" SpecificValues="" StartColor="#0000ff" TileMethod="SmartTile" UniqueColors="#dc143c,#6495ed,#f0e68c,#228b22,#a9a9a9,#ffa500,#ba55d3,#a0522d,#ff69b4,#4b0082,#d3d3d3,#9acd32,#00ffff,#808000,#ffb6c1" UpperCutoffIncludedExcluded="Excluded" />
+                  <LabelStyle Disabled="false" />
+                </Layer>
+                <Layer name="Base Layers - Points" order="1">
+                  <DisplayName>Base Layers - Points</DisplayName>
+                  <DataConnection />
+                  <LayerType>Placeholder</LayerType>
+                  <ShowLabel value="False" />
+                </Layer>
+                <Layer name="Base Layers - Lines" order="2">
+                  <DisplayName>Base Layers - Lines</DisplayName>
+                  <DataConnection />
+                  <LayerType>Placeholder</LayerType>
+                  <ShowLabel value="False" />
+                </Layer>
+                <Layer name="1" order="3">
+                  <LayerType>Polygons</LayerType>
+                  <isBaseLayer value="False" />
+                  <isReorderedBaseLayer value="False" />
+                  <isRestlyedBaseLayer value="False" />
+                  <baseLabelOverriden value="False" />
+                  <isThemeLayer value="False" />
+                  <DisplayName>#1</DisplayName>
+                  <DataConnection>#1</DataConnection>
+                  <ShowInLegend value="True" />
+                  <ZoomToLayer value="True" />
+                  <Disable value="False" />
+                  <PolygonStyle FillColor="#988576" HatchColor="#000000" HatchStyle="single" Hatched="false" Opacity="50" OutlineColor="#000000" OutlineSize="3" UseFillColor="true" />
+                  <ThemeStyle ColorMethod="Ramp" EndColor="#ff0000" ManualTiles="" NoneSpecificValuesAction="Color" NumTiles="5" SpecificValues="" StartColor="#0000ff" TileMethod="SmartTile" UniqueColors="#dc143c,#6495ed,#f0e68c,#228b22,#a9a9a9,#ffa500,#ba55d3,#a0522d,#ff69b4,#4b0082,#d3d3d3,#9acd32,#00ffff,#808000,#ffb6c1" UpperCutoffIncludedExcluded="Excluded" />
+                  <LabelStyle Disabled="false" />
+                </Layer>
+                <Layer name="Base Layers - Polygons" order="4">
+                  <DisplayName>Base Layers - Polygons</DisplayName>
+                  <DataConnection />
+                  <LayerType>Placeholder</LayerType>
+                  <ShowLabel value="False" />
+                </Layer>
+              </Layers>
+              <Legend>
+                <LegendStyle IconHeight="8" IconWidth="8" Position="Field" Size="8" UseCommaSeparators="false" />
+              </Legend>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Indoor Pools by Area</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxReportMap" />
+        </Node>
+        <Node ToolID="67">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="906" y="378" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\palsd\AppData\Local\Temp\Engine_5836_3dff2aa905d38945ab9bd8f3eee2ecbe_\Engine_5836_ca1365390068ee4fade901e9eb0e4dae~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Report</DefaultTab>
+                  <Hints>
+                    <Map>
+                      <BaseMap>[No Base Map]</BaseMap>
+                    </Map>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="68">
+          <GuiSettings Plugin="PortfolioPluginsGui.ComposerText.PortfolioComposerText">
+            <Position x="834" y="306" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Images />
+              <Output>Text</Output>
+              <HeaderMode value="False" />
+              <RawMode value="False" />
+              <ValidatePCXML value="True" />
+              <Message />
+              <RichTextMode value="True" />
+              <RichTextString><![CDATA[{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+\viewkind4\uc1\pard\qc\b\fs24 NYC - DPR Pools Data Analysis Report\par
+}
+]]></RichTextString>
+              <Styles>
+                <Style Name="TextStyle" />
+              </Styles>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Report Title</AnnotationText>
+              <DefaultAnnotationText>NYC - DPR Pools Data Analysis ...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerTextPlugin" />
+        </Node>
+        <Node ToolID="69">
+          <GuiSettings Plugin="PortfolioPluginsGui.ComposerText.PortfolioComposerText">
+            <Position x="834" y="498" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Images />
+              <Output>Text</Output>
+              <HeaderMode value="False" />
+              <RawMode value="False" />
+              <ValidatePCXML value="True" />
+              <Message />
+              <RichTextMode value="True" />
+              <RichTextString><![CDATA[{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+\viewkind4\uc1\pard\fs24 Indoor pools map\par
+\par
+\par
+}
+]]></RichTextString>
+              <Styles>
+                <Style Name="TextStyle" />
+              </Styles>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Indoor Title</AnnotationText>
+              <DefaultAnnotationText><![CDATA[Indoor pools map
+
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerTextPlugin" />
+        </Node>
+        <Node ToolID="70">
+          <GuiSettings Plugin="PortfolioPluginsGui.ComposerText.PortfolioComposerText">
+            <Position x="834" y="570" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Images />
+              <Output>Text</Output>
+              <HeaderMode value="False" />
+              <RawMode value="False" />
+              <ValidatePCXML value="True" />
+              <Message />
+              <RichTextMode value="True" />
+              <RichTextString><![CDATA[{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+\viewkind4\uc1\pard\fs24 Outdoor Pools map\par
+}
+]]></RichTextString>
+              <Styles>
+                <Style Name="TextStyle" />
+              </Styles>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Outdoor Title</AnnotationText>
+              <DefaultAnnotationText>Outdoor Pools map</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerTextPlugin" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="72">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="29" y="485" width="645" height="486" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Outdoor Pools Geo Spatial Data</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Outdoor Pools Geo Spatial Data</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="16">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="54" y="654" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">06NYCOutdoorPoolsDataprep.yxdb</File>
+              <FormatSpecificOptions />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>06NYCOutdoorPoolsDataprep.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="borough" size="1" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\02DataPreparation\01_NYCParksPools.csv" type="String" />
+                <Field name="gispropnum" size="5" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\02DataPreparation\01_NYCParksPools.csv" type="String" />
+                <Field name="location" size="7" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\02DataPreparation\01_NYCParksPools.csv" type="String" />
+                <Field name="name" size="35" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\02DataPreparation\01_NYCParksPools.csv" type="V_String" />
+                <Field name="polygon" size="4885" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\02DataPreparation\01_NYCParksPools.csv" type="V_String" />
+                <Field name="the_geom" size="13884" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\02DataPreparation\02_DPRPools.csv" type="V_String" />
+                <Field name="pooltype" size="12" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\02DataPreparation\02_DPRPools.csv" type="String" />
+                <Field name="shape_star" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\02DataPreparation\02_DPRPools.csv" type="Double" />
+                <Field name="shape_stle" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\02DataPreparation\02_DPRPools.csv" type="Double" />
+                <Field name="Size" size="21" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\02DataPreparation\06NYCOutdoorPoolsDataprep.yxdb" type="V_String" />
+                <Field name="Accessible" size="1" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\02DataPreparation\06NYCOutdoorPoolsDataprep.yxdb" type="V_String" />
+                <Field name="lat" size="7" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\02DataPreparation\06NYCOutdoorPoolsDataprep.yxdb" type="V_String" />
+                <Field name="lon" size="8" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\02DataPreparation\06NYCOutdoorPoolsDataprep.yxdb" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="18">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.CreatePoints.CreatePoints">
+            <Position x="210" y="594" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Fields fieldX="lon" fieldY="lat" />
+              <Mode>Double</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxCreatePoints" />
+        </Node>
+        <Node ToolID="22">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+            <Position x="282" y="810" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <GroupFields>
+                <Field field="BOROUGH" />
+              </GroupFields>
+              <HeaderField field="POOLTYPE" />
+              <DataField field="Count" />
+              <Methods>
+                <Method method="Sum" />
+              </Methods>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="BOROUGH" size="1" source="CrossTab:Group:Sum:" type="String" />
+                <Field name="Diving" source="CrossTab:Header:POOLTYPE:Diving:Sum:" type="Int64" />
+                <Field name="Intermediate" source="CrossTab:Header:POOLTYPE:Intermediate:Sum:" type="Int64" />
+                <Field name="Mini" source="CrossTab:Header:POOLTYPE:Mini:Sum:" type="Int64" />
+                <Field name="Olympic" source="CrossTab:Header:POOLTYPE:Olympic:Sum:" type="Int64" />
+                <Field name="Wading" source="CrossTab:Header:POOLTYPE:Wading:Sum:" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+        </Node>
+        <Node ToolID="25">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="546" y="810" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[Diving]+[Intermediate]+[Mini]+[Olympic]+[Wading]" field="Total pools" size="1073741823" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[Total pools = [Diving]+[Intermediate]+[Mini]+[Olympic]+[Wading]
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="26">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="198" y="726" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="POOLTYPE" action="GroupBy" rename="POOLTYPE" />
+                <SummarizeField field="POOLTYPE" action="Count" rename="Count" />
+                <SummarizeField field="BOROUGH" action="GroupBy" rename="BOROUGH" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="27">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
+            <Position x="402" y="810" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldType>Numeric</FieldType>
+              <Fields orderChanged="False">
+                <Field name="Diving" />
+                <Field name="Intermediate" />
+                <Field name="Mini" />
+                <Field name="Olympic" />
+                <Field name="Wading" />
+                <Field name="*Unknown" />
+              </Fields>
+              <CopyOutput value="False" />
+              <Expression>IF ISNULL([_CurrentField_]) THEN 0 ELSE [_CurrentField_] ENDIF</Expression>
+              <ChangeFieldType value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>IF ISNULL([_CurrentField_]) THEN 0 ELSE [_CurrentField_] ENDIF</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiFieldFormula" />
+        </Node>
+        <Node ToolID="30">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.PolyBuild.PolyBuild">
+            <Position x="270" y="534" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SpatialObj field="Centroid" />
+              <GroupField field="borough" />
+              <BuildType>ConvexHull</BuildType>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxPolyBuild" />
+        </Node>
+        <Node ToolID="51">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="342" y="582" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="borough" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="borough" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_borough" selected="True" rename="Right_borough" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="52">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="522" y="546" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\palsd\AppData\Local\Temp\Engine_5836_3dff2aa905d38945ab9bd8f3eee2ecbe_\Engine_5836_8e377f92d7bebc438f75237d573cfa5c~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Map</DefaultTab>
+                  <Hints>
+                    <Map>
+                      <BaseMap>Latest:CloudMade</BaseMap>
+                    </Map>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="71">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="29" y="257" width="649" height="217" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Indoor Pools Geo Spatial Data</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Indoor Pools Geo Spatial Data</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="1">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="54" y="318" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">05NYCIndoorPoolsDataprep.yxdb</File>
+              <FormatSpecificOptions />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>05NYCIndoorPoolsDataprep.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="borough" size="1" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\02DataPreparation\01_NYCParksPools.csv" type="String" />
+                <Field name="gispropnum" size="5" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\02DataPreparation\01_NYCParksPools.csv" type="String" />
+                <Field name="location" size="7" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\02DataPreparation\01_NYCParksPools.csv" type="String" />
+                <Field name="name" size="35" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\02DataPreparation\01_NYCParksPools.csv" type="V_String" />
+                <Field name="polygon" size="4885" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\02DataPreparation\01_NYCParksPools.csv" type="V_String" />
+                <Field name="the_geom" size="13884" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\02DataPreparation\02_DPRPools.csv" type="V_String" />
+                <Field name="pooltype" size="12" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\02DataPreparation\02_DPRPools.csv" type="String" />
+                <Field name="shape_star" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\02DataPreparation\02_DPRPools.csv" type="Double" />
+                <Field name="shape_stle" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\02DataPreparation\02_DPRPools.csv" type="Double" />
+                <Field name="Size" size="17" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\02DataPreparation\05NYCIndoorPoolsDataprep.yxdb" type="V_String" />
+                <Field name="Accessible" size="1" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\02DataPreparation\05NYCIndoorPoolsDataprep.yxdb" type="V_String" />
+                <Field name="lat" size="7" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\02DataPreparation\05NYCIndoorPoolsDataprep.yxdb" type="V_String" />
+                <Field name="lon" size="8" source="File: D:\workspace\alteryx\Datathon2024\DPR\Submission\02DataPreparation\05NYCIndoorPoolsDataprep.yxdb" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="4">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.CreatePoints.CreatePoints">
+            <Position x="174" y="318" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Fields fieldX="lon" fieldY="lat" />
+              <Mode>Projected</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxCreatePoints" />
+        </Node>
+        <Node ToolID="53">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.PolyBuild.PolyBuild">
+            <Position x="234" y="378" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SpatialObj field="Centroid" />
+              <GroupField field="borough" />
+              <BuildType>ConvexHull</BuildType>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxPolyBuild" />
+        </Node>
+        <Node ToolID="54">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="306" y="330" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="borough" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="borough" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Left_borough" selected="True" input="Left_" />
+                    <SelectField field="Left_gispropnum" selected="True" input="Left_" />
+                    <SelectField field="Left_location" selected="True" input="Left_" />
+                    <SelectField field="Left_name" selected="True" input="Left_" />
+                    <SelectField field="Left_pooltype" selected="True" input="Left_" />
+                    <SelectField field="Left_shape_star" selected="True" input="Left_" />
+                    <SelectField field="Left_lat" selected="True" input="Left_" />
+                    <SelectField field="Left_lon" selected="True" input="Left_" />
+                    <SelectField field="Left_Centroid" selected="True" input="Left_" />
+                    <SelectField field="Right_borough" selected="False" rename="Right_borough" input="Right_" />
+                    <SelectField field="Right_SpatialObj_Built" selected="True" input="Right_" />
+                    <SelectField field="*Unknown" selected="False" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="55">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="414" y="306" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\palsd\AppData\Local\Temp\Engine_5836_3dff2aa905d38945ab9bd8f3eee2ecbe_\Engine_5836_4727ac3d2f5e4140a1bc0c6b0f4be39b~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Map</DefaultTab>
+                  <Hints>
+                    <Map>
+                      <BaseMap>Latest:CloudMade</BaseMap>
+                    </Map>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="56">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="450" y="378" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="borough" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="borough" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_borough" selected="True" rename="Right_borough" input="Right_" />
+                    <SelectField field="Right_SpatialObj_Built" selected="True" rename="Right_SpatialObj_Built" input="Right_" />
+                    <SelectField field="Right_Right_borough" selected="True" rename="Right_Right_borough" input="Right_" />
+                    <SelectField field="Right_gispropnum" selected="True" rename="Right_gispropnum" input="Right_" />
+                    <SelectField field="Right_location" selected="True" rename="Right_location" input="Right_" />
+                    <SelectField field="Right_name" selected="True" rename="Right_name" input="Right_" />
+                    <SelectField field="Right_polygon" selected="True" rename="Right_polygon" input="Right_" />
+                    <SelectField field="Right_the_geom" selected="True" rename="Right_the_geom" input="Right_" />
+                    <SelectField field="Right_pooltype" selected="True" rename="Right_pooltype" input="Right_" />
+                    <SelectField field="Right_shape_star" selected="True" rename="Right_shape_star" input="Right_" />
+                    <SelectField field="Right_shape_stle" selected="True" rename="Right_shape_stle" input="Right_" />
+                    <SelectField field="Right_Size" selected="True" rename="Right_Size" input="Right_" />
+                    <SelectField field="Right_Accessible" selected="True" rename="Right_Accessible" input="Right_" />
+                    <SelectField field="Right_lat" selected="True" rename="Right_lat" input="Right_" />
+                    <SelectField field="Right_lon" selected="True" rename="Right_lon" input="Right_" />
+                    <SelectField field="Right_Centroid" selected="True" rename="Right_Centroid" input="Right_" />
+                    <SelectField field="Left_Right_borough" selected="True" rename="Left_Right_borough" input="Left_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="57">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="594" y="390" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\palsd\AppData\Local\Temp\Engine_5836_3dff2aa905d38945ab9bd8f3eee2ecbe_\Engine_5836_1542e4fc29e6b34495e59b12e8310609~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Map</DefaultTab>
+                  <Hints>
+                    <Map>
+                      <BaseMap>Latest:CloudMade</BaseMap>
+                    </Map>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="59" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="33" Connection="Output" />
+      <Destination ToolID="59" Connection="Input" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="40" Connection="Output" />
+      <Destination ToolID="59" Connection="Input" />
+    </Connection>
+    <Connection name="#5">
+      <Origin ToolID="64" Connection="Output" />
+      <Destination ToolID="59" Connection="Input" />
+    </Connection>
+    <Connection name="#4">
+      <Origin ToolID="66" Connection="Output" />
+      <Destination ToolID="59" Connection="Input" />
+    </Connection>
+    <Connection name="#6">
+      <Origin ToolID="68" Connection="Output" />
+      <Destination ToolID="59" Connection="Input" />
+    </Connection>
+    <Connection name="#7">
+      <Origin ToolID="69" Connection="Output" />
+      <Destination ToolID="59" Connection="Input" />
+    </Connection>
+    <Connection name="#8">
+      <Origin ToolID="70" Connection="Output" />
+      <Destination ToolID="59" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="33" Connection="Output" />
+      <Destination ToolID="34" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="59" Connection="Output" />
+      <Destination ToolID="60" Connection="Report Layout" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="60" Connection="Output" />
+      <Destination ToolID="61" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="64" Connection="Output" />
+      <Destination ToolID="65" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="66" Connection="Output" />
+      <Destination ToolID="67" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="26" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="51" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="30" Connection="Output" />
+      <Destination ToolID="51" Connection="Left" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="64" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="51" Connection="Join" />
+      <Destination ToolID="64" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="27" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="Output" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="Output" />
+      <Destination ToolID="33" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="Output" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="51" Connection="Join" />
+      <Destination ToolID="52" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="51" Connection="Join" />
+      <Destination ToolID="56" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="54" Connection="Join" />
+      <Destination ToolID="56" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="53" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="54" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="53" Connection="Output" />
+      <Destination ToolID="54" Connection="Right" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="66" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="56" Connection="Join" />
+      <Destination ToolID="66" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="54" Connection="Join" />
+      <Destination ToolID="55" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="56" Connection="Join" />
+      <Destination ToolID="57" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>DataPrepSpatial</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="954c6af6-5689-4042-ac7d-651e90a227a9" />
+      <Telemetry>
+        <PreviousWorkflowId value="4495a1b4-4e5c-4893-80ac-3c676e61b097" />
+        <OriginWorkflowId value="715db432-bd04-408a-a448-478335be571a" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
